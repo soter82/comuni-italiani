@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('italian_cities', function (Blueprint $table) {
             $table->string('id', 4)->primary();
+            $table->integer('istat_id')->index()->default(0);
             $table->string('name')->index();
             $table->integer('province_id');
             $table->string('province_name');
